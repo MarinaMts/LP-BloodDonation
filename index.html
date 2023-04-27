@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/logo.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Doe Sangue</title>
+</head>
+<body>
+    <nav id="navigation">
+        <img src="img/logo.svg" alt="Logo">
+        <ul>
+            <li><a href="#">Depoimentos</a></li>
+            <li><a href="#">Quem pode doar?</a></li>
+            <li><a href="#">Agende</a></li>
+        </ul>
+    </nav>
+
+    <section id="cells">
+            <h1>SEJA DOADOR <br> DE SANGUE</h1>
+            <a href="https://www.prosangue.sp.gov.br/home/"><button>Agende aqui</button></a>
+    </section>
+
+    <section>
+        <h1>Doar sangue é um gesto caridoso onde uma pequena quantidade ajuda a salvar vidas.</h1>
+        <img src="img/blood.png" alt="Gota de sangue">
+
+        <div>
+            <p>Uma doação de 450ml pode salvar quatro vidas.</p>
+        </div>
+        <div>
+            <p>A demanda cresce e a oferta diminui a cada ano. Apenas 1,6% da população brasileira doa sangue.</p>
+        </div>
+        <div>
+            <p>A situação dos bancos de sangue é crítica (OMS de 2022), o hemocentro de São Paulo conta com apenas 35% da capacidade do estoque total.</p>
+        </div>
+    </section>
+    <section>
+        <h1>DEPOIMENTOS</h1>
+    </section>
+    <section>
+        <img src="img/donation2.png" alt="Ilustração doação de sangue">
+
+        <h1>VANTAGENS</h1>
+        <ul>
+            <li>Renovação de células;</li>
+            <li>Redução de riscos de desenvolver câncer;</li>
+            <li>Ajuda quem precisa.</li>
+            <li>Diminui o risco de desenvolver doenças do coração</li>
+        </ul>
+
+        <h1>QUEM PODE DOAR?</h1>
+        <ul>
+            <li>Ter entre 16 e 69 anos;</li>
+            <li>Peso maior de 50kg;</li>
+            <li>Estar saudável e descansado</li>
+            <li>Não ter contraído doenças virais nos ultimos meses</li>
+        </ul>
+        <img src="img/donation1.png" alt="Ilustração doação de sangue">
+
+    </section>
+    <footer>
+        <h2>Você não precisa ser médico para salvar vidas</h2>
+
+        <div>
+            <p>Agende sua doação no site oficial do Hemocentro de São Paulo Fundação Pró-Sangue</p>
+            <a href="https://www.prosangue.sp.gov.br/home/"><button>Vamos lá!</button></a>
+        </div>
+
+        <div id="developer">
+            <figure>
+                <img src="img/imgFooter.svg" alt="">
+            </figure>
+
+            <p>Desenvolvido por:</p>
+            
+            <div>
+                <a class="as" href=""><img src="img/github.svg" alt="">Gabriel Morais</a>
+                <a href=""><img src="img/github.svg" alt=""></a>
+                <a href=""><img src="img/github.svg" alt=""></a>
+                <a href=""><img src="img/github.svg" alt=""></a>
+                <a href=""><img src="img/github.svg" alt=""></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.cells.min.js"></script>
+    <script>
+        VANTA.CELLS({
+            el: "#cells",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            color1: 0x8c0000,
+            color2: 0xf23535,
+            size: 2.00,
+            speed: 1.40
+        })
+    </script>
+</body>
+</html>
