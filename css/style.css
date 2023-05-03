@@ -1,7 +1,12 @@
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
 }
 button {
     background-color: #171515;
@@ -12,15 +17,12 @@ button {
     border-radius: 4ch;
 }
 
-
 ul li {
     list-style: none;
 }
-#navigation ul li a {
-    text-decoration: none;
-    color: #171515;
-    opacity: 0.8;
-}
+
+/*-----------------------------------Nav------------------------------------------*/
+
 
 #navigation {
     width: 100%;
@@ -36,17 +38,62 @@ ul li {
     gap: 5ch;
 }
 
+#navigation ul li a {
+    text-decoration: none;
+    color: #171515;
+    opacity: 0.8;
+}
+
 #navigation ul li a:hover {
     opacity: 1;
 }
 
+/*-----------------------------------------------------------------------------*/
 #cells{
     padding: 3ch;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#phrase{
+    text-align: left;
+    font-weight: 600;
+    font-size: 12ch;
+    color: #F5F5F5;
+    letter-spacing: 0.02em;
+
+    text-shadow: -8px 10px 12px rgba(0, 0, 0, 0.5);
+}
+
+.infomation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: #FAE9CF;
+}    
+
+.div1 { grid-area: 1 / 1 / 4 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div2 { grid-area: 1 / 2 / 3 / 3; }
+
+.div3 { grid-area: 4 / 1 / 6 / 2; }
+
+.div4 { grid-area: 3 / 2 / 6 / 3; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
+/*-------------------------------------Footer----------------------------------------*/
 
 footer {
     background-color: #8B0000;
