@@ -3,7 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 h1 {
     font-family: 'Manrope', sans-serif;
 
@@ -30,11 +32,17 @@ ul li {
     align-items: center;
     justify-content: space-around;
     padding: 0.5ch;
+    top: 0;
+    position: fixed;
+    z-index: 10000;
 }
 
 #navigation ul {
     display: flex;
     gap: 5ch;
+}
+nav.scroll {
+    position: fixed;
 }
 
 #navigation ul li a {
@@ -55,7 +63,8 @@ ul li {
 /*-----------------------------------------------------------------------------*/
 
 #cells {
-    padding: 3ch;
+    padding: 3ch 3ch 3ch 3ch;
+    margin-top: 50px;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -75,7 +84,9 @@ ul li {
     margin-bottom: 10px;
     text-shadow: -8px 10px 12px rgba(0, 0, 0, 0.8);
 }
-
+.title {
+    margin-left: 20ch;
+}
 .title-button a {
     font-family: 'Quicksand';
     font-style: normal;
@@ -136,9 +147,8 @@ ul li {
 }
 
 .slide-container {
-    width: 500px;
+    width: 600px;
     padding: 40px;
-    margin-right: 5ch;
 }
 
 .slide-content {
@@ -157,7 +167,7 @@ ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 14px;
+    padding: 50px 20px;
 }
 
 .image-content {
@@ -170,7 +180,7 @@ ul li {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #4070f4;
+    background-color: #660000;
 
     left: 0;
     top: 0;
@@ -185,7 +195,7 @@ ul li {
     bottom: -40px;
     height: 40px;
     width: 40px;
-    background-color: #4070f4;
+    background-color: #660000;
 }
 
 .overlay::after {
@@ -207,14 +217,22 @@ ul li {
     width: 100%;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #4070f4;
+    border: 4px solid #660000;
 }
 
+.swiper-pagination-bullet {
+    background-color: #fae9cf;
+
+}
+.swiper-pagination-bullet-active {
+    background-color: #fae9cf;
+}
 .name {
     font-size: 18px;
     font-weight: 500;
     color: #333;
-    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Manrope', sans-serif;
 }
 
 .description {
@@ -222,10 +240,10 @@ ul li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
-    color: #707070;
+    font-size: 17px;
+    color: black;
     text-align: center;
-
+    font-family: 'Quicksand';
     height: 150px;
 }
 
@@ -238,6 +256,9 @@ ul li {
     background-color: #fae9cf;
     height: 100vh;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20ch;
 }
 
 .all-donations {
@@ -252,6 +273,8 @@ ul li {
     font-size: 2rem;
     font-family: 'Roboto', sans-serif;
     padding: 6rem 15rem 6rem 15rem;
+    margin-top: 3ch;
+ 
 }
 
 .donation-benefits {
@@ -262,27 +285,37 @@ ul li {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     line-height: 1;
+    padding: 15px;
     margin-top: 1.5rem;
     background-color: #660000;
+    border: 1px solid black;
+    font-size: 18px;
+    transition: width 0.5s ease;
 }
+.donation-benefits:hover {
+    width: 400px;
+    font-size: 20px;
+
+}
+
 
 .donation-benefits p {
     color: #e9e3e6;
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 600;
-    font-size: 22px;
     line-height: 28px;
     text-align: center;
     padding: 12px 2 0px;
 }
 
-.information {
+#information {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    height: 100vh;
     background-color: #fae9cf;
 }
 

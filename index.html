@@ -1,320 +1,266 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/x-icon" href="img/logo.svg" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="img/logo.svg" />
 
-        <!-- <link rel="stylesheet" href="css/reset.css"> -->
-        <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@200;300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
-            rel="stylesheet"
-        />
-        <title>Doe Sangue</title>
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@200;300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Doe Sangue</title>
+  </head>
 
-    <body>
-        <nav id="navigation">
+  <body onscroll="onScroll()">
+    <nav id="navigation">
+        <a href="#cells">
             <img src="img/logo.svg" alt="Logo" />
-            <ul>
-                <li>
-                    <a href="#">Depoimentos</a>
-                </li>
-                <li>
-                    <a href="#">Quem pode doar?</a>
-                </li>
-                <li>
-                    <a href="#">Agende</a>
-                </li>
-            </ul>
-        </nav>
+        </a>
+      <ul>
+        <li>
+          <a href="#declaration">Depoimentos</a>
+        </li>
+        <li>
+          <a href="#information">Quem pode doar?</a>
+        </li>
+        <li>
+          <a href="#agende">Agende</a>
+        </li>
+      </ul>
+    </nav>
 
-        <section id="cells">
-            <div class="title">
-                <h1 id="phrase">
-                    SEJA DOADOR <br />
-                    DE SANGUE
-                </h1>
-                <button class="title-button">
-                    <!-- <a href="https://www.prosangue.sp.gov.br/home/"> -->
-                    <a> Agende aqui </a>
-                </button>
-            </div>
-        </section>
+    <section id="cells">
+      <div class="title">
+        <h1 id="phrase">
+          SEJA DOADOR <br />
+          DE SANGUE
+        </h1>
+        <button class="title-button">
+          <!-- <a href="https://www.prosangue.sp.gov.br/home/"> -->
+          <a> Agende aqui </a>
+        </button>
+      </div>
+    </section>
 
-        <section id="boxes">
-            <h1 class="donation-title">
-                Doar sangue é um gesto caridoso onde uma pequena quantidade
-                ajuda a salvar vidas.
-            </h1>
+    <section id="boxes">
+      <h1 class="donation-title">
+        Doar sangue é um gesto caridoso onde uma pequena quantidade ajuda a
+        salvar vidas.
+      </h1>
 
-            <div class="all-donations">
-                <div>
-                    <button class="donation-benefits">
-                        <p>
-                            A demanda cresce e a oferta diminui a cada ano.
-                            Apenas 1,6% da população brasileira doa sangue.
-                        </p>
-                    </button>
+      <div class="all-donations">
+        <div>
+          <button class="donation-benefits">
+            <p>
+              A demanda cresce e a oferta diminui a cada ano. Apenas 1,6% da
+              população brasileira doa sangue.
+            </p>
+          </button>
+        </div>
+        <div>
+          <button class="donation-benefits">
+            <p>Uma doação de 450ml pode salvar quatro vidas.</p>
+          </button>
+        </div>
+        <div>
+          <button class="donation-benefits">
+            <p>
+              A situação dos bancos de sangue é crítica (OMS de 2022), o
+              hemocentro de São Paulo conta com apenas 35% da capacidade do
+              estoque total.
+            </p>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="declaration">
+      <h1>DE <br />POI<br />MEN<br />TOS</h1>
+      <div class="container">
+        <div class="slide-container swiper">
+          <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+              <div class="card swiper-slide">
+                <div class="image-content">
+                  <span class="overlay"></span>
+
+                  <div class="card-image">
+                    <img src="img/rosana.jpg" alt="" class="card-img" />
+                  </div>
                 </div>
-                <div>
-                    <button class="donation-benefits">
-                        <p>Uma doação de 450ml pode salvar quatro vidas.</p>
-                    </button>
+
+                <div class="card-content">
+                  <h2 class="name">Rosana Pereira</h2>
+                  <p class="description">
+                    Para ajudar no abastecimento dos bancos de sangue que vivem
+                    escassos. Me sensibilizei com as propagandas e pedidos de
+                    ajuda. Existem muitas pessoas que precisam e acredito que é
+                    um ato de amor em empatia para com o próximo.
+                  </p>
                 </div>
-                <div>
-                    <button class="donation-benefits">
-                        <p>
-                            A situação dos bancos de sangue é crítica (OMS de
-                            2022), o hemocentro de São Paulo conta com apenas
-                            35% da capacidade do estoque total.
-                        </p>
-                    </button>
+              </div>
+              <div class="card swiper-slide">
+                <div class="image-content">
+                  <span class="overlay"></span>
+
+                  <div class="card-image">
+                    <img src="img/arthur.jpg" alt="" class="card-img" />
+                  </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="declaration">
-            <h1>DE <br />POI<br />MEN<br />TOS</h1>
-            <div class="container">
-                <div class="slide-container swiper">
-                    <div class="slide-content">
-                        <div class="card-wrapper swiper-wrapper">
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay"></span>
-
-                                    <div class="card-image">
-                                        <img
-                                            src="img/img.jpeg"
-                                            alt=""
-                                            class="card-img"
-                                        />
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <h2 class="name">Gabriel Morais</h2>
-                                    <p class="description">
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Animi optio pariatur
-                                        earum quasi iusto aperiam officiis
-                                        exercitationem. Architecto commodi neque
-                                        eos minus, natus hic veritatis obcaecati
-                                        esse velit modi quaerat?
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay"></span>
-
-                                    <div class="card-image">
-                                        <img
-                                            src="img/img.jpeg"
-                                            alt=""
-                                            class="card-img"
-                                        />
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <h2 class="name">Gabriel Morais</h2>
-                                    <p class="description">
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Animi optio pariatur
-                                        earum quasi iusto aperiam officiis
-                                        exercitationem. Architecto commodi neque
-                                        eos minus, natus hic veritatis obcaecati
-                                        esse velit modi quaerat?
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay"></span>
-
-                                    <div class="card-image">
-                                        <img
-                                            src="img/img.jpeg"
-                                            alt=""
-                                            class="card-img"
-                                        />
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <h2 class="name">Gabriel Morais</h2>
-                                    <p class="description">
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Animi optio pariatur
-                                        earum quasi iusto aperiam officiis
-                                        exercitationem. Architecto commodi neque
-                                        eos minus, natus hic veritatis obcaecati
-                                        esse velit modi quaerat?
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay"></span>
-
-                                    <div class="card-image">
-                                        <img
-                                            src="img/img.jpeg"
-                                            alt=""
-                                            class="card-img"
-                                        />
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <h2 class="name">Gabriel Morais</h2>
-                                    <p class="description">
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Animi optio pariatur
-                                        earum quasi iusto aperiam officiis
-                                        exercitationem. Architecto commodi neque
-                                        eos minus, natus hic veritatis obcaecati
-                                        esse velit modi quaerat?
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay"></span>
-
-                                    <div class="card-image">
-                                        <img
-                                            src="img/img.jpeg"
-                                            alt=""
-                                            class="card-img"
-                                        />
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <h2 class="name">Gabriel Morais</h2>
-                                    <p class="description">
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Animi optio pariatur
-                                        earum quasi iusto aperiam officiis
-                                        exercitationem. Architecto commodi neque
-                                        eos minus, natus hic veritatis obcaecati
-                                        esse velit modi quaerat?
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-pagination"></div>
+                <div class="card-content">
+                  <h2 class="name">Arthur Chokiw</h2>
+                  <p class="description">
+                    A primeira vez recebendo uma doação foi assustadora por ser
+                    algo desconhecido, mas não senti nenhuma dor, ao contrário,
+                    como eles aplicam antialérgicos antes da transfusão, eu
+                    senti sono.
+                  </p>
                 </div>
-            </div>
-        </section>
+              </div>
+              <div class="card swiper-slide">
+                <div class="image-content">
+                  <span class="overlay"></span>
 
-        <section class="information">
-            <div class="div1">
-                <img
-                    src="img/donation2.png"
-                    alt="Ilustração doação de sangue"
-                />
-            </div>
-            <div class="div2">
-                <h1>VANTAGENS</h1>
-                <ul class="order">
-                    <li>Renovação de células;</li>
-                    <li>Redução de riscos de desenvolver câncer;</li>
-                    <li>Ajuda quem precisa.</li>
-                    <li>Diminui o risco de desenvolver doenças do coração</li>
-                </ul>
-            </div>
-            <div class="div3">
-                <h1>QUEM PODE DOAR?</h1>
-                <ul class="order">
-                    <li>Ter entre 16 e 69 anos;</li>
-                    <li>Peso maior de 50kg;</li>
-                    <li>Estar saudável e descansado</li>
-                    <li>Não ter contraído doenças virais nos ultimos meses</li>
-                </ul>
-            </div>
-            <div class="div4">
-                <img
-                    src="img/donation1.png"
-                    alt="Ilustração doação de sangue"
-                />
-            </div>
-        </section>
-        <footer>
-            <h2>Você não precisa ser médico para salvar vidas</h2>
-
-            <div>
-                <p>
-                    Agende sua doação no site oficial do Hemocentro de São Paulo
-                    Fundação Pró-Sangue
-                </p>
-                <button class="title-button">
-                    <a href="https://www.prosangue.sp.gov.br/home/">
-                        Vamos lá!
-                    </a>
-                </button>
-            </div>
-
-            <div id="developer">
-                <figure>
-                    <img src="img/imgFooter.svg" alt="" />
-                </figure>
-
-                <p>Desenvolvido por:</p>
-                <div>
-                    <a class="as" href="https://github.com/MarinaMts">
-                        <img src="img/github.svg" alt="" />
-                        Marina Martins
-                    </a>
-                    <a class="as" href="https://github.com/gabrielmoraiis">
-                        <img src="img/github.svg" alt="" />
-                        Gabriel Morais
-                    </a>
-                    <a class="as" href="https://github.com/pedrothecatholic">
-                        <img src="img/github.svg" alt="" />
-                        Pedro Henrique de Sousa
-                    </a>
-                    <a class="as" href="https://github.com/TrizWolf">
-                        <img src="img/github.svg" alt="" />
-                        Beatriz Moreira Corazza
-                    </a>
-                    <a class="as" href="">
-                        <img src="img/github.svg" alt="" />
-                        Paulo Henrique Santos
-                    </a>
+                  <div class="card-image">
+                    <img src="img/mirela.jpg" alt="" class="card-img" />
+                  </div>
                 </div>
+
+                <div class="card-content">
+                  <h2 class="name">Mirela Barbosa</h2>
+                  <p class="description">
+                    O sentimento de poder ajudar alguém, ainda mais sabendo de
+                    pessoas próximas que fizeram tratamentos e que precisavam de
+                    doações e ver os familiares agradecidos por isso, é mt
+                    legal.
+                  </p>
+                </div>
+              </div>
+              <div class="card swiper-slide">
+                <div class="image-content">
+                  <span class="overlay"></span>
+
+                  <div class="card-image">
+                    <img src="img/emerson.jpg" alt="" class="card-img" />
+                  </div>
+                </div>
+
+                <div class="card-content">
+                  <h2 class="name">Emerson Rodrigo Morais</h2>
+                  <p class="description">
+                    No começo é assustador, pois você vê uma agulha grossa, mas
+                    eu não senti nenhuma dor e esse sentimento de medo passou.A
+                    vantagem de doar é que você sabe que está ajudando alguém
+                    que está precisando de sangue pra se recuperar de alguma
+                    cirurgia ou acidente.
+                  </p>
+                </div>
+              </div>
             </div>
-        </footer>
+          </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.cells.min.js"></script>
-        <script>
-            VANTA.CELLS({
-                el: '#cells',
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: false,
-                minHeight: 200.0,
-                minWidth: 200.0,
-                scale: 1.0,
-                color1: 0x8c0000,
-                color2: 0xf23535,
-                size: 2.0,
-                speed: 1.4
-            });
-        </script>
-        <script src="js/swiper-bundle.min.js"></script>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
 
-        <script src="js/script.js"></script>
-    </body>
+    <section id="information">
+      <div class="div1">
+        <img src="img/donation2.png" alt="Ilustração doação de sangue" />
+      </div>
+      <div class="div2">
+        <h1>VANTAGENS</h1>
+        <ul class="order">
+          <li>Renovação de células;</li>
+          <li>Redução de riscos de desenvolver câncer;</li>
+          <li>Ajuda quem precisa.</li>
+          <li>Diminui o risco de desenvolver doenças do coração</li>
+        </ul>
+      </div>
+      <div class="div3">
+        <h1>QUEM PODE DOAR?</h1>
+        <ul class="order">
+          <li>Ter entre 16 e 69 anos;</li>
+          <li>Peso maior de 50kg;</li>
+          <li>Estar saudável e descansado</li>
+          <li>Não ter contraído doenças virais nos ultimos meses</li>
+        </ul>
+      </div>
+      <div class="div4">
+        <img src="img/donation1.png" alt="Ilustração doação de sangue" />
+      </div>
+    </section>
+    <footer id="agende">
+      <h2>Você não precisa ser médico para salvar vidas</h2>
+
+      <div>
+        <p>
+          Agende sua doação no site oficial do Hemocentro de São Paulo Fundação
+          Pró-Sangue
+        </p>
+        <button class="title-button">
+          <a href="https://www.prosangue.sp.gov.br/home/"> Vamos lá! </a>
+        </button>
+      </div>
+
+      <div id="developer">
+        <figure>
+          <img src="img/imgFooter.svg" alt="" />
+        </figure>
+
+        <p>Desenvolvido por:</p>
+        <div>
+          <a class="as" href="https://github.com/MarinaMts">
+            <img src="img/github.svg" alt="" />
+            Marina Martins
+          </a>
+          <a class="as" href="https://github.com/gabrielmoraiis">
+            <img src="img/github.svg" alt="" />
+            Gabriel Morais
+          </a>
+          <a class="as" href="https://github.com/pedrothecatholic">
+            <img src="img/github.svg" alt="" />
+            Pedro Henrique de Sousa
+          </a>
+          <a class="as" href="https://github.com/TrizWolf">
+            <img src="img/github.svg" alt="" />
+            Beatriz Moreira Corazza
+          </a>
+          <a class="as" href="">
+            <img src="img/github.svg" alt="" />
+            Paulo Henrique Santos
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.cells.min.js"></script>
+    <script>
+      VANTA.CELLS({
+        el: "#cells",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        color1: 0x8c0000,
+        color2: 0xf23535,
+        size: 2.0,
+        speed: 1.4,
+      });
+    </script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
