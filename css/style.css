@@ -261,7 +261,7 @@ nav.scroll {
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 12ch;
+    gap: 1.5rem
 }
 
 .all-donations {

@@ -83,13 +83,13 @@ video,
 input,
 textarea,
 select {
-    background: transparent;
-    border: 0;
-    font-size: 100%;
-    margin: 0;
-    outline: 0;
-    padding: 0;
-    vertical-align: baseline;
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
 }
 article,
 aside,
@@ -102,15 +102,15 @@ hgroup,
 menu,
 nav,
 section {
-    display: block;
+  display: block;
 }
 body {
-    line-height: 1;
+  line-height: 1;
 }
 abbr[title],
 dfn[title] {
-    border-bottom: 1px dotted;
-    cursor: help;
+  border-bottom: 1px dotted;
+  cursor: help;
 }
 /*blockquote, q {
 	quotes:none;
@@ -119,35 +119,35 @@ blockquote:before, blockquote:after, q:before, q:after {
 	content:none;
 }*/
 del {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 hr {
-    background: transparent;
-    border: 0;
-    clear: both;
-    color: transparent;
-    height: 1px;
-    margin: 0;
-    padding: 0;
+  background: transparent;
+  border: 0;
+  clear: both;
+  color: transparent;
+  height: 1px;
+  margin: 0;
+  padding: 0;
 }
 mark {
-    background-color: #ffffb3;
-    font-style: italic;
+  background-color: #ffffb3;
+  font-style: italic;
 }
 input,
 select {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 ins {
-    background-color: red;
-    color: white;
-    text-decoration: none;
+  background-color: red;
+  color: white;
+  text-decoration: none;
 }
 ol,
 ul {
-    list-style: none;
+  list-style: none;
 }
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
