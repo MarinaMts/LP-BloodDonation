@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Depoimentos</title>
+    <link rel="stylesheet" href="css/depoimentos.css" />
+    <script src="js/modal.js" defer></script>
+  </head>
+  <body>
+    <h1>Conte-nos a sua história!!</h1>
+    <button id="open-modal">Dê o seu depoimento</button>
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+      <div class="modal-header">
+        <h2>Formulário</h2>
+        <button id="close-modal">Enviar</button>
+      </div>
+      <div class="modal-body">
+        <form action="" method="post">
+          <fieldset>
+            <label  for="nome" >Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+          </fieldset>
+          <fieldset>
+            <label for="idade" >Idade:</label>
+            <input type="text" id="idade" name="idade" required>
+          </fieldset>
+          <fieldset>
+            <label for="titulo">Título</label>
+            <input type="text" id="titulo" name="titulo" required>
+          </fieldset>
+          <fieldset>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem"></textarea>
+          </fieldset>
+          
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
