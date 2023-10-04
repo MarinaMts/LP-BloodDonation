@@ -2,23 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Depoimentos</title>
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/depoimentos.css" />
     <script src="js/modal.js" defer></script>
   </head>
   <body>
-    <h1>Conte-nos a sua história!!</h1>
-    <button id="open-modal">Dê o seu depoimento</button>
+    <nav id="navigation">
+      <a href="index.html">
+        <img src="img/logo.svg" alt="Logo" />
+      </a>
+    </nav>
+    <div class="banner">
+      <h1>Você é a esperança de muitos</h1>
+      <h2>Conte-nos a sua história!!</h2>
+    </div>
+    <div id="depoimentos">
+      <button id="open-modal">Dê o seu depoimento</button>
+    </div>
     <div id="fade" class="hide"></div>
     <div id="modal" class="hide">
       <div class="modal-header">
         <h2>Formulário</h2>
-        <button id="close-modal">Enviar</button>
+        <input form="forms" id="close-modal" type="submit" value="Enviar" name="inputEnviar" onclick="validar()"/>
       </div>
       <div class="modal-body">
-        <form action="" method="post">
+        <form action="https://localhost/projeto/index.php" method="post">
           <fieldset>
             <label  for="nome" >Nome:</label>
             <input type="text" id="nome" name="nome" required>
@@ -39,5 +49,23 @@
         </form>
       </div>
     </div>
+
+    <script>
+      function validar() {
+        form = document.querySelectorAll('form');
+        name = document.getElementById('nome').value;
+        age = document.getElementById('idade').value;
+        title = document.getElementById('titulo').value;
+        msg = document.getElementById('mensagem').value;
+
+        
+
+        if(name == "" && age == "" && title == "" && msg == "") {
+          alert('Algum campo em branco')
+        }else {
+          form.submit()
+        }
+      }
+    </script>
   </body>
-</html>
+</html> 
