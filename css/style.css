@@ -250,6 +250,23 @@ nav.scroll {
     height: 150px;
 }
 
+.row {
+    display: flex;
+    justify-content: flex-end;
+}
+.row a {
+    text-decoration: none;
+    color: black;
+    background-color: #660000;
+    padding: 1rem 1.5rem;
+    border-radius: .8rem;
+    transition: all .5s;
+}
+.row a:hover {
+    transform: scale(1.1);
+    background-color: #550101;
+
+}
 /*-----------------------------------------------------------------------------*/
 
 #boxes {
@@ -361,6 +378,7 @@ nav.scroll {
     align-items: center;
 }
 
+
 /*-------------------------------------Footer----------------------------------------*/
 
 footer {
@@ -370,10 +388,28 @@ footer {
     grid-template-rows: 1fr 1fr 1fr;
     text-align: center;
     padding: 4ch;
-    height: 70vh;
+    height: 90vh;
     align-items: center;
 }
 
+footer .containerText {
+    display: flex;
+    width: 100%;
+    height: 30rem;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.containerText #map {
+    margin-top: 2rem;
+    border: 2px solid black;
+    border-radius: 1.5rem;
+}
+
+.gm-style-iw-d div {
+    color: black;
+}
 footer h2 {
     font-size: 6ch;
     font-family: 'Manrope', sans-serif;

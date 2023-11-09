@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Depoimentos</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.svg" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/depoimentos.css" />
     <script src="js/modal.js" defer></script>
   </head>
-  <body>
+  <body onload="">
     <nav id="navigation">
-      <a href="#cells">
+      <a href="index.html">
         <img src="img/logo.svg" alt="Logo" />
       </a>
     </nav>
@@ -18,93 +19,72 @@
       <h1>Você é a esperança de muitos</h1>
       <h2>Conte-nos a sua história!!</h2>
     </div>
-    <div id="depoimentos">
-      <button id="open-modal">Dê o seu depoimento</button>
-    </div>
-    <div id="fade" class="hide"></div>
-    <div id="modal" class="hide">
-      <div class="modal-header">
-        <h2>Formulário</h2>
-        <input form="my-forms" id="close-modal" type="submit" value="Enviar" name="inputEnviar" onclick="validar()"/>
-      </div>
-      <div class="modal-body">
-        <form action="https://localhost/projeto/index.php" method="post" id="my-forms">
-          <fieldset>
-            <div class="fieldset-wrapper">
-              <div class="wrapper-row">
-                <div class="input-wrapper">
-                  <label for="nome">Nome:</label>
-                  <input type="text" id="name"  name="nome" required>
-                </div>
-                <div class="input-wrapper">
-                  <label for="sobrenome">Sobrenome:</label>
-                  <input type="text" id="surname" name="sobrenome" required >
-                </div>
-              </div>
-              <div class="wrapper-row">
-                <div class="input-wrapper">
-                  <label for="idade">Idade: <span>(somente números)</span></label>
-                  <input type="number" id="age"  name="idade" required>
-                </div>
-                <div class="input-wrapper">
-                  <label for="celular">Celular: <span>(mínimo 8 caracteres)</span></label>
-                  <input type="text" id="phone" name="celular" required placeholder="Ex: (00)00000-0000" >
-                </div>
-              </div>
-              
-              <div class="wrapper-row">
-                <div class="input-wrapper">
-                  <label for="cidade">Cidade:</span></label>
-                  <input type="text" id="city"  name="cidade" required minlenght="3">
-                </div>
-                <div class="input-wrapper">
-                  <label for="estado">Estado:</span></label>
-                  <input type="text" id="estado"  name="estado" required maxlength="2">
-                </div>
-              </div>
-              
+    <div id="container">
+      <h2>Formulário</h2>
+      <form id="my-forms">
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <div class="wrapper-row">
               <div class="input-wrapper">
-                <label for="nome">Titulo: <span>(mínimo 8 caracteres)</span></label>
-                <input type="text" id="title" name="titulo" required minlenght="8">
+                <label for="nome">Nome:</label>
+                <input type="text" id="name"  name="nome" required>
               </div>
               <div class="input-wrapper">
-                <label for="depoimento">Depoimento: </label>
-                <textarea name="depoimento" id="depoi" required></textarea>
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="surname" name="sobrenome" required >
               </div>
             </div>
-          </fieldset>
-        </form>
-      </div>
+            <div class="wrapper-row">
+              <div class="input-wrapper">
+                <label for="idade">Idade: <span>(somente números)</span></label>
+                <input type="number" id="age"  name="idade" required>
+              </div>
+              <div class="input-wrapper">
+                <label for="celular">Celular: <span>(mínimo 8 caracteres)</span></label>
+                <input type="text" id="phone" name="celular" required placeholder="Ex: (00)00000-0000" >
+              </div>
+            </div>
+
+            <div class="wrapper-row">
+              <div class="input-wrapper">
+                <label for="cep">Cep:</label>
+                <input type="text" id="cep" name="cep" required minlenght="8"  />
+              </div>
+              <input id="buttonCep" type="submit" value="Validar Cep" onfocus="buscarCep()" />
+            </div>
+            
+            <div class="wrapper-row">
+              <div class="input-wrapper">
+                <label for="cidade">Cidade:</span></label>
+                <input type="text" id="city"  name="cidade" required minlenght="3">
+              </div>
+              <div class="input-wrapper">
+                <label for="uf">UF:</span></label>
+                <input type="text" id="uf"  name="uf" required >
+              </div>
+            </div>
+            
+            <div class="input-wrapper">
+              <label for="nome">Titulo: <span>(mínimo 8 caracteres)</span></label>
+              <input type="text" id="title" name="titulo" required minlenght="8">
+            </div>
+            <div class="input-wrapper">
+              <label for="depoimento">Depoimento: </label>
+              <textarea name="depoimento" id="depoi" required></textarea>
+            </div>
+          </div>
+          <input form="my-forms" id="enviar"  type="submit" value="Enviar" name="inputEnviar"/>
+        </fieldset>
+      </form>
+
     </div>
-
+     
+     
+     
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB1uLTj7dOfFSmP9WPLFyn153mXOmsScg"></script>
+    <script src="js/depoimentos.js"></script>
     <script>
-      function validar() {
-        let form = document.getElementById('my-forms');
-        let name = document.getElementById('nome').value;
-        let surname = document.getElementById('sobrenome').value;
-        let age = document.getElementById('idade').value;
-        let title = document.getElementById('titulo').value;
-        let depoi = document.getElementById('depoimento').value;
-        let estado = document.getElementById('estado').value;
-        let cidade = document.getElementById('cidade').value;
-        let celular = document.getElementById('celular').value;
-
-        if (
-          name === '' ||
-          surname === '' ||
-          age === '' ||
-          title === '' ||
-          depoi === '' ||
-          estado === '' ||
-          cidade === '' ||
-          celular === ''
-        ) {
-          alert('Preencha todos os campos do formulário.');
-          return;
-        }
-        form.submit();
-      }
-      
+     
     </script>
   </body>
 </html> 
