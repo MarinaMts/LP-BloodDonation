@@ -18,7 +18,7 @@
     <title>Doe Sangue</title>
   </head>
 
-  <body onscroll="onScroll()">
+  <body onscroll="onScroll()" >
     <nav id="navigation">
       <a href="#cells">
         <img src="img/logo.svg" alt="Logo" />
@@ -170,6 +170,9 @@
 
           <div class="swiper-pagination"></div>
         </div>
+        <div class="row">
+          <a href="depoimentos.html">Deixe seu depoimento</a>
+        </div>
       </div>
     </section>
 
@@ -202,19 +205,25 @@
     <footer id="agende">
       <h2>Você não precisa ser médico para salvar vidas</h2>
 
-      <div>
-        <p>
-          Agende sua doação no site oficial do Hemocentro de São Paulo Fundação
-          Pró-Sangue
-        </p>
-        <button class="title-button">
-          <a href="https://www.prosangue.sp.gov.br/home/" target="_blank">
-            Vamos lá!
-          </a>
-        </button>
+      <div class="containerText">
+        <div>
+          <p>
+            Agende sua doação no site oficial do Hemocentro de São Paulo Fundação
+            Pró-Sangue
+          </p>
+          <button class="title-button">
+            <a href="https://www.prosangue.sp.gov.br/home/" target="_blank">
+              Vamos lá!
+            </a>
+          </button>
+        </div>
+        
+        <div id="map" style="width:35%; height:100%"></div>
+
       </div>
 
       <div id="developer">
+        
         <figure>
           <img src="img/imgFooter.svg" alt="" />
         </figure>
@@ -252,7 +261,47 @@
         </div>
       </div>
     </footer>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB1uLTj7dOfFSmP9WPLFyn153mXOmsScg"></script>
+    <script>
+      let map;
 
+      async function initMap() {
+        const { Map } = await google.maps.importLibrary("maps");
+
+        map = new Map(document.getElementById("map"), {
+          center: { lat: -23.49750883929466, lng: -46.86557664581549 },
+          zoom: 10,
+        });
+        
+        const tourStops = [
+          [{ lat: -23.557625820022782, lng: -46.66891798785191 }, "Posto Clínicas"],
+          [{ lat: -23.496491750949108, lng: -46.87231011668939 }, "Posto Barueri"],
+          [{ lat: -23.585124624341347, lng: -46.651334445522856 }, "Posto Dante Pazzanese"],
+          [{ lat: -23.52465976760602, lng: -46.771738548546786 }, " Posto Regional de Osasco"],
+        ];
+
+        const infoWindow = new google.maps.InfoWindow();
+
+        tourStops.forEach(([position, title], i) => {
+          const marker = new google.maps.Marker({
+            position,
+            map,
+            title: `${i + 1}. ${title}`,
+            label: `${i + 1}`,
+            optimized: false,
+          });
+
+          marker.addListener("click", () => {
+            infoWindow.close();
+            infoWindow.setContent(marker.getTitle());
+            infoWindow.open(marker.getMap(), marker);
+          });
+        });
+      }
+
+      initMap();
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.cells.min.js"></script>
     <script>
